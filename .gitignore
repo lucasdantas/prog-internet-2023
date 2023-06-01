@@ -3,4 +3,5 @@
 eclipse
 .settings/*
 eclipse/*
+tmp
 tmp/*

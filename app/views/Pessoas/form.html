@@ -1,0 +1,24 @@
+#{extends 'main.html' /}
+#{set title:'Cadastro de pessoa' /}
+
+<h1>#{get 'title' /}</h1>
+
+<form action="/pessoas/salvar" method="POST">
+	
+	<div class="mb-3">
+		<label class="form-label">Nome:</label>
+		<input class="form-control" type="text" name="pessoa.nome" />
+	</div>
+	
+	<div class="mb-3">
+		<label class="form-label">Email:</label>
+		<input class="form-control" type="email" name="pessoa.email" />
+	</div>
+	
+	<div class="mb-3">
+		<label class="form-label">Senha:</label>
+		<input class="form-control" type="password" name="pessoa.senha" />
+	</div>
+	
+	<input class="btn btn-primary" type="submit" />
+</form>

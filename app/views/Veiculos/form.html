@@ -1,0 +1,25 @@
+#{extends 'main.html' /}
+#{set title:'Cadastro de veículo' /}
+
+<h1>#{get 'title' /}</h1>
+
+<form action="/veiculos/salvar" method="POST">
+	
+	<div class="mb-3">
+		<label class="form-label">Placa:</label>
+		<input class="form-control" type="text" name="v.placa" />
+	</div>
+	
+	<div class="mb-3">
+		<label class="form-label">Ano:</label>
+		<input class="form-control" type="number" name="v.ano" />
+	</div>
+	
+	<div class="mb-3">
+		<label class="form-label">Modelo:</label>
+		<input class="form-control" type="text" name="v.modelo" />
+	</div>
+	
+	<input class="btn btn-primary" type="submit" />
+	
+</form>

@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set title:'Listagem de veículos' /}
+
+<h1>#{get 'title' /}</h1>
+
+#{list items:veiculos, as:'v'}
+	<h2>#${v.id}</h2>
+	<p class="mb-0"><b>Placa</b>: ${v.placa}</p>
+	<p class="mb-0">Ano: ${v.ano}</p>
+	<p>&{'veiculoModelo', v.modelo}</p>
+	<hr />
+#{/list}
+#{else}
+	<p>Nenhum veículo cadastrado no sistema</p>
+#{/else}
+
+<a class="btn btn-primary mb-3" href="@{Veiculos.form}">Novo veículo</a>

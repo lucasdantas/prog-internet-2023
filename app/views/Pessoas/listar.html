@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+#{set title:'Listagem de pessoas' /}
+
+<h1>#{get 'title' /}</h1>
+
+<a href="@{Pessoas.form}" class="btn btn-primary">Cadastrar</a>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+  	#{list items:pessoas, as:'p'}
+	    <tr>
+	      <th>${p.id}</th>
+	      <td>${p.nome}</td>
+	      <td>${p.email}</td>
+	      <td>
+	      	<a href="@{Pessoas.detalhar(p.id)}">Detalhar</a>
+	      	<a href="@{Pessoas.remover(p.id)}">Remover</a>
+	      </td>
+	    </tr>
+	#{/list}
+  </tbody>
+</table>
+
+
+
+
+

@@ -3,26 +3,28 @@
 
 <h1>#{get 'title' /}</h1>
 
-<form action="/pessoas/salvar" method="POST">
+<form action="@{Pessoas.salvar}" method="POST">
+
+	<input type="hidden" name="pessoa.id" value="${p?.id}" />
 	
 	<div class="mb-3">
 		<label class="form-label">Nome:</label>
-		<input class="form-control" type="text" name="pessoa.nome" />
+		<input class="form-control" type="text" name="pessoa.nome" value="${p?.nome}" />
 	</div>
 	
 	<div class="mb-3">
 		<label class="form-label">Email:</label>
-		<input class="form-control" type="email" name="pessoa.email" />
+		<input class="form-control" type="email" name="pessoa.email" value="${p?.email}" />
 	</div>
 	
 	<div class="mb-3">
 		<label class="form-label">Data de nascimento:</label>
-		<input class="form-control" type="date" name="pessoa.nascimento" />
+		<input class="form-control" type="date" name="pessoa.nascimento" value="${p?.nascimento}"/>
 	</div>
 	
 	<div class="mb-3">
 		<label class="form-label">Senha:</label>
-		<input class="form-control" type="password" name="pessoa.senha" />
+		<input class="form-control" type="password" name="pessoa.senha" value="${p?.senha}" />
 	</div>
 	
 	<input class="btn btn-primary" type="submit" />

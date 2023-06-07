@@ -1,5 +1,11 @@
 #{extends 'main.html' /}
-#{set title:'Cadastro de pessoa' /}
+
+#{if p}
+	#{set title:'Edição de pessoa' /}
+#{/if}
+#{else}
+	#{set title:'Cadastro de pessoa' /}
+#{/else}
 
 <h1>#{get 'title' /}</h1>
 
@@ -27,5 +33,10 @@
 		<input class="form-control" type="password" name="pessoa.senha" value="${p?.senha}" />
 	</div>
 	
-	<input class="btn btn-primary" type="submit" />
+	#{if p}
+		<input class="btn btn-primary" type="submit" value="Atualizar" />
+	#{/if}
+	#{else}
+		<input class="btn btn-primary" type="submit" value="Cadastrar" />
+	#{/else}
 </form>

@@ -3,6 +3,18 @@
 
 <h1>#{get 'title' /}</h1>
 
+<form action="@{Pessoas.listar}" method="GET">
+	<div class="row">
+		<div class="col-9">
+			<input class="form-control" type="text"
+				name="termo" value="${termo}" placeholder="Informe o termo de busca" />
+		</div>
+		<div class="col-3">
+			<input type="submit" class="btn btn-primary mb-3" value="Buscar" />
+		</div>
+	</div>
+</form>
+
 <a href="@{Pessoas.form}" class="btn btn-primary">Cadastrar</a>
 
 <table class="table table-striped">

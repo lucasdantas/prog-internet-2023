@@ -20,6 +20,15 @@
 		<input class="form-control" type="text" name="v.modelo" />
 	</div>
 	
+	<div class="mb-3">
+		<label class="form-label">Proprietário:</label>
+		<select class="form-select" name="v.pessoa.id">
+		  #{list items:pessoas, as:'p'}
+		  	<option value="${p.id}">${p.nome}</option>
+		  #{/list}
+		</select>
+	</div>
+	
 	<input class="btn btn-primary" type="submit" />
 	
 </form>

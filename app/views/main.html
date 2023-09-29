@@ -24,6 +24,12 @@
 		        <a class="nav-link disabled">Disabled</a>
 		      </div>
 		    </div>
+		    #{if session['usuarioLogado']}
+		    	<span class="navbar-text">
+		    		${session['usuarioLogado']}
+		    	</span>
+		    	<a href="@{Logins.logout}" class="ms-2 btn btn-outline-success">Logout</a>
+		  	#{/if}
 		  </div>
 		</nav>
 		

@@ -3,10 +3,13 @@ package controllers;
 import java.util.List;
 
 import models.Pessoa;
+import play.mvc.Before;
 import play.mvc.Controller;
+import play.mvc.With;
 
+@With(Secure.class)
 public class Pessoas extends Controller {
-	
+
 	public static void form() {
 		render();
 	}
@@ -29,7 +32,7 @@ public class Pessoas extends Controller {
 		listar(null);
 	}
 	
-	public static void listar(String termo) {
+	public static void listar(String termo) {	
 		List<Pessoa> pessoas = null;
 		if (termo == null || termo.isEmpty()) {
 			pessoas = Pessoa.findAll();			

@@ -1,5 +1,7 @@
 package jobs;
 
+import java.util.Date;
+
 import models.Pessoa;
 import play.jobs.Job;
 import play.jobs.OnApplicationStart;
@@ -14,12 +16,14 @@ public class Inicializador extends Job {
 			joao.nome = "Joao Silva";
 			joao.email = "joaojj@gmail.com";
 			joao.senha = "12345";
+			joao.nascimento = new Date();
 			joao.save();
 			
 			Pessoa maria = new Pessoa();
 			maria.nome = "Maria Silva";
 			maria.email = "mmmmjj@gmail.com";
 			maria.senha = "54321";
+			maria.nascimento = new Date();
 			maria.save();
 		}
 	}

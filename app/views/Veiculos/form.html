@@ -7,24 +7,26 @@
 	
 	<div class="mb-3">
 		<label class="form-label">Placa:</label>
-		<input class="form-control" type="text" name="v.placa" />
+		<input class="form-control" type="text" name="v.placa" value="${flash['v.placa']}" />
+		<span class="error">#{error 'v.placa' /}</span>
 	</div>
 	
 	<div class="mb-3">
 		<label class="form-label">Ano:</label>
-		<input class="form-control" type="number" name="v.ano" />
+		<input class="form-control" type="number" name="v.ano" value="${flash['v.ano']}" />
+		<span class="error">#{error 'v.ano' /}</span>
 	</div>
 	
 	<div class="mb-3">
 		<label class="form-label">Modelo:</label>
-		<input class="form-control" type="text" name="v.modelo" />
+		<input class="form-control" type="text" name="v.modelo" value="${flash['v.modelo']}" />
 	</div>
 	
 	<div class="mb-3">
 		<label class="form-label">Proprietário:</label>
 		<select class="form-select" name="v.pessoa.id">
 		  #{list items:pessoas, as:'p'}
-		  	<option value="${p.id}">${p.nome}</option>
+		  	<option ${flash['v.pessoa.id'] == p.id.toString() ? 'selected':''} value="${p.id}">${p.nome}</option>
 		  #{/list}
 		</select>
 	</div>

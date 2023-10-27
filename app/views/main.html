@@ -34,6 +34,13 @@
 		</nav>
 		
     	<div class="container mt-3">
+    		#{ifErrors}
+				<div class="alert alert-warning" role="alert">
+				  Dados inválidos
+				</div>		
+			#{/ifErrors}
+    	
+    	
     		#{if flash.success}
 				<div class="alert alert-success" role="alert">
 				  ${flash.success}

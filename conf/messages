@@ -2,3 +2,5 @@
 # For example, for French create a messages.fr file
 #
 veiculoModelo=O veículo é do modelo %s
+validation.required=Campo de preenchimento obrigatório
+validation.minSize=O tamanho mínimo de caracteres não foi atingido

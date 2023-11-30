@@ -4,6 +4,8 @@
 <h1>#{get 'title' /}</h1>
 
 <form action="/veiculos/salvar" method="POST">
+
+	<input type="hidden" name="v.id" value="${flash['v.id']}" />
 	
 	<div class="mb-3">
 		<label class="form-label">Placa:</label>

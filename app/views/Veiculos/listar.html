@@ -9,6 +9,7 @@
 	<p class="mb-0">Ano: ${v.ano}</p>
 	<p class="mb-0">Proprietário: ${v.pessoa.nome}</p>
 	<p>&{'veiculoModelo', v.modelo}</p>
+	<a href="@{Veiculos.editar(v.id)}">Editar</a>
 	<hr />
 #{/list}
 #{else}
